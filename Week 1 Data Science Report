@@ -1,0 +1,26 @@
+Introduction / Business Problem
+With the Covd-19 pandemic of 2020, the state of Louisiana has experienced a significant change in business along with the rest of the United States.  
+Businesses such as bars and dine-in restaurants have curtailed business while firms such as big box retail and takeout restaurants have seen an increase in demand.  
+With the changes in the business operating conditions, there is an opportunity for short term profitability with the right business in the right location.
+Current restrictions in the state of Louisiana differ by parrish, but the following are common to all the large population centers in the state:
+•	Bars are limited to 25% indoor capacity
+•	Dine-in establishments are limited to 50% of seating capacity
+•	Most entertainment venues (theaters, clubs) are closed or limited to 25% capacity
+•	All current restrictions are found in https://ready.nola.gov/incident/coronavirus/safe-reopening/#377
+Based on the current restrictions, take-out or fast-food restaurants are an opportunity to profit in the current business climate.  A venue such as a fast food restaurant 
+or food truck could fill the gap created by limited bar and dine-in capacity.   
+
+Therefore, a use of a venue database could be used to determine which areas of the state of Louisiana could be under-served by fast food restaurants 
+where a food truck or small take-out restaurant could be profitable.
+
+Data 
+The data that will be sourced for this project will involve the following
+•	https://www.louisiana-demographics.com/cities_by_population - a list population centers in the state of Louisiana which will be pulled into a pandas dataframe.
+•	The Foursquare API database.  Venues will be called from the API based on the latitude and longitude of the top 8 population centers in Louisiana.
+•	Current Covid-19 restrictions in the state of Louisiana for data interpretation (https://ready.nola.gov/incident/coronavirus/safe-reopening/#377)
+
+The dataframe of the population will be run through geocoder to determine the latitude and longitude of each of the top 8 population centers in the state.  
+This information will feed into a call to the Foursquare API to pull a list of venues 2500 meters from the population centers.  
+From there the data will be analyzed and a recommendation made.
+
+
